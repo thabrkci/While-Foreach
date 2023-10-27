@@ -17,6 +17,7 @@ class Program
        //   sayac ++;
        // }
        // Console.WriteLine(toplam/sayac);
+
         Console.WriteLine("Lütfen bir sayi giriniz");
         int sayi1 = Convert.ToInt32(Console.ReadLine());
         int basamak = 0;
@@ -26,6 +27,13 @@ class Program
             sayi1 = sayi1 / 10;
         }
         Console.WriteLine("Girdiğiniz sayi"+ basamak.ToString()+ "basamaklidir");
+
+        Console.Write("***Foreach***");
+        string [] arabalar = {"Nissan,Bmw,Toyata,Lexus"};
+         foreach (var araba in arabalar)
+         {
+            Console.WriteLine(araba);
+         }
 
     }
 
