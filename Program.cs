@@ -1,41 +1,42 @@
-﻿using System.Diagnostics;
+﻿using System;
 
-namespace While_Foreach;
-
-class Program
+namespace While_Foreach
 {
-    static void Main(string[] args)
-    //1den başlayarak consoleden girilen sayıya kadar(sayı dahil) ortalama hesaplayıp consolea yazdıran program
+    class Program
     {
-       // Console.WriteLine("Lütfen bir sayi giriniz!");
-       // int sayi = int.Parse(Console.ReadLine());
-       // int sayac = 1;
-       // int toplam = 0;
-       // while (sayac<= sayi)
-       // {
-       //   toplam+= sayac;
-       //   sayac ++;
-       // }
-       // Console.WriteLine(toplam/sayac);
-
-        Console.WriteLine("Lütfen bir sayi giriniz");
-        int sayi1 = Convert.ToInt32(Console.ReadLine());
-        int basamak = 0;
-        while (sayi1 > 0)
+        static void Main(string[] args)
         {
-            basamak++;
-            sayi1 = sayi1 / 10;
+            // Calculate and print the average from 1 to the number entered from the console (including the entered number).
+            // Uncomment the following lines if you want to use this block of code.
+            // Console.WriteLine("Please enter a number:");
+            // int number = int.Parse(Console.ReadLine());
+            // int counter = 1;
+            // int sum = 0;
+            // while (counter <= number)
+            // {
+            //     sum += counter;
+            //     counter++;
+            // }
+            // Console.WriteLine(sum / (double)counter);
+
+            // Count the number of digits in the entered number.
+            Console.WriteLine("Please enter a number:");
+            int number1 = Convert.ToInt32(Console.ReadLine());
+            int digitCount = 0;
+            while (number1 > 0)
+            {
+                digitCount++;
+                number1 = number1 / 10;
+            }
+            Console.WriteLine("The entered number has " + digitCount.ToString() + " digits.");
+
+            // Using foreach to iterate through an array of car names.
+            Console.Write("***Foreach***");
+            string[] cars = { "Nissan", "Bmw", "Toyota", "Lexus" };
+            foreach (var car in cars)
+            {
+                Console.WriteLine(car);
+            }
         }
-        Console.WriteLine("Girdiğiniz sayi"+ basamak.ToString()+ "basamaklidir");
-
-        Console.Write("***Foreach***");
-        string [] arabalar = {"Nissan,Bmw,Toyata,Lexus"};
-         foreach (var araba in arabalar)
-         {
-            Console.WriteLine(araba);
-         }
-
     }
-
-    
 }
